@@ -80,11 +80,6 @@ main {
   letter-spacing: 0.025em;
 }
 
-#features .section__title,
-#pricing .section__title {
-  text-align: center;
-}
-
 .section__para {
   font-size: 18px;
   text-align: center;
@@ -117,6 +112,8 @@ button {
 nav {
     display: flex;
     padding-top: 32px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .nav__row {
@@ -161,6 +158,7 @@ nav {
 .nav__links {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav__link {
@@ -423,8 +421,10 @@ header {
 }
 
 .header__img--wrapper {
-  width: calc(100% - 40%);
+  width: 55%;
+  min-width: 400px;
 }
+
 
 .header__img {
   width: 100%;
@@ -550,7 +550,7 @@ header {
   font-size: 48px;
   font-weight: 900;
   color: #243e63;
-  text-align: center;
+  text-align: left;
 }
 
 .section__para {
@@ -691,11 +691,16 @@ header {
   justify-content: space-between;
 }
 
-#values .values__description {
-  flex: 1;
-  max-width: 50%;
-  padding: 32px 64px 32px 0;
+#values .row {
+  gap: 48px;
 }
+
+
+#values .values__description {
+  width: 50%;
+  padding-right: 48px;
+}
+
 
 #values .values__img {
   flex: 1;
@@ -972,7 +977,7 @@ section #testimonials {
 .testimonials__description {
   display: flex;
   flex-direction: column;
-  padding-left: 64px;
+  padding-left: 32px;
 }
 #testimonials .section__title {
   margin-bottom: 24px;
@@ -1313,6 +1318,12 @@ html, body {
     display: block;
   }
 
+  .header__img--wrapper,
+  .header__description {
+    width: 100%;
+    text-align: center;
+  }
+
   header .row {
     flex-direction: column;
     align-items: center;
@@ -1349,6 +1360,17 @@ html, body {
     font-size: 16px;
   }
 
+  #testimonials .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonials__img,
+  .testimonials__description {
+    width: 100%;
+    padding: 0;
+  }
+
   footer {
     overflow-x: hidden;
   }
@@ -1377,6 +1399,18 @@ html, body {
   #quality .row,
   #values .row {
     flex-direction: column-reverse;
+  }
+
+  #values .row {
+    flex-direction: column-reverse;
+  }
+
+  #values .values__description,
+  #values .values__img {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    text-align: center;
   }
 
   #steps .row,
